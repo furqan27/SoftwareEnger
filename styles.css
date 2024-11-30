@@ -1,0 +1,291 @@
+/* Homepage Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', sans-serif;
+    background: linear-gradient(to bottom, #e3f2fd, #e8f5e9);
+    color: #333;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #2e7d32;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 26px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+header h1 {
+    font-size: 24px;
+    margin: 0;
+    display: inline-block;
+}
+
+/* navigation */
+nav {
+    float: right;
+}
+nav a {
+    margin: 0 10px;
+    color: white;
+
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* hero */
+.hero-section {
+    height: 100vh;
+    background: url('images/background.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    text-align: center;
+
+}
+.hero-section::after {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+.hero-content {
+    position: relative;
+    color: white;
+    max-width: 600px;
+
+    padding: 20px;
+
+    text-align: center;
+    z-index: 2;
+    animation: fadeIn 1.2s ease-in-out;
+}
+.hero-content h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    font-family: 'Georgia', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.hero-content button {
+    padding: 12px 30px;
+    font-size: 18px;
+
+    font-weight: bold;
+    color: #2e7d32;
+
+    background: white;
+    border: none;
+    border-radius: 25px;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+.hero-content button:hover {
+    background: #f1f8e9;
+    transform: translateY(-2px);
+}
+
+section {
+    padding: 50px 20px;
+}
+
+/* about us */
+.about-us {
+    text-align: center;
+    background: url('images/pexels-mastercowley-713297.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 245px 100px;
+
+}
+.about-us h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.about-us p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* our services */
+.our-services {
+    text-align: center;
+    background: url('images/Services bg.jpeg') no-repeat center center/cover;
+    color: white;
+    padding: 230px 100px;
+}
+.our-services h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.our-services ul {
+    list-style: none;
+    padding: 0;
+}
+.our-services li {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+/* contact us */
+.Contact-Us {
+    text-align: center;
+    background: url('images/Landscaper.jpeg') no-repeat center center/cover;
+    color: white;
+    padding: 250px 100px ;
+}
+.Contact-Us h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.Contact-Us p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 8px;
+    font-size: 15px;
+    color: #555;
+}
+
+
+/* Form Page Styles */
+.form-section {
+    padding: 40px 20px;
+    display: none;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2e7d32;
+    font-family: 'Georgia', sans-serif;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Georgia', sans-serif;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border: 1px solid #2e7d32;
+    box-shadow: 0 0 5px rgba(46, 125, 50, 0.3);
+}
+
+.submit-button {
+    font-family: 'Georgia', sans-serif;background-color: #2e7d32;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.submit-button:hover {
+    background-color: #1b5e20;
+    transform: translateY(-2px);
+}
+
+.back-button {
+    font-family: 'Georgia', sans-serif;
+    background-color: #2e7d32;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.back-button:hover {
+    background-color: #1b5e20;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

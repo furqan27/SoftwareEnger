@@ -30,4 +30,7 @@
 
 <img width="1470" alt="website2" src="https://github.com/user-attachments/assets/296adabf-2c87-4791-ac08-bfc4e79f2db3">
 
-  
+12/2 Connor
+Initial commit of Backend code
+ * Needs ability to get user input from front end
+ * If you're looking to run this on your own, insert user credentials for MySQL in database.js

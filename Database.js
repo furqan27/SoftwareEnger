@@ -37,11 +37,13 @@ connection.query('USE bookings', (err) => {
 const createTableQuery = `
     CREATE TABLE IF NOT EXISTS bookingsTable (
         id INT AUTO_INCREMENT PRIMARY KEY,
-        value1 VARCHAR(255),
-        value2 VARCHAR(255),
-        value3 VARCHAR(255),
-        value4 VARCHAR(255),
-        value5 VARCHAR(255)
+        name VARCHAR(255),
+        email VARCHAR(255),
+        phoneNumber VARCHAR(15),
+        address VARCHAR(255),
+        date DATE,
+        time TIME,
+        service VARCHAR(255)
     )
 `;
 connection.query(createTableQuery, (err, results) => {
@@ -53,10 +55,10 @@ connection.query(createTableQuery, (err, results) => {
 });
 
 //Table manipulation code
-const exBooking = ['Value1', 'Value2', 'Value3', 'Value4', 'Value5'];
+const exBooking = ['John J. Jon', 'johnjon@gmail.com', '1234567890', '123 Johnathon St, City', '2024-12-01', '14:30:00', 'Lawn care'];
 
 //Prepare SQL query to insert data into the bookingsTable
-const insertQuery = 'INSERT INTO bookingsTable (value1, value2, value3, value4, value5) VALUES (?, ?, ?, ?, ?)';
+const insertQuery = 'INSERT INTO bookingsTable (name, email, phoneNumber, address, date, time, service) VALUES (?, ?, ?, ?, ?, ?, ?)';
 
 //Insert values into the table (no need to use map)
 connection.query(insertQuery, exBooking, (err, results) => {

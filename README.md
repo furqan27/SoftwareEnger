@@ -97,8 +97,5 @@ Accepts JSON payload with booking details: {
     "time": "14:00",
     "service": "Drivway cleaning"
 }
-<<<<<<< HEAD
 12/5 Connor
 *Attempted to finalize code, unfortunately still having errors with picking up the data from the front end. 
-=======
->>>>>>> aa193b269fc02dcf02ec6baee44536c164238efa

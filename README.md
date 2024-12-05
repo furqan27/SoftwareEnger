@@ -1,3 +1,33 @@
+## Features
+- **Frontend**:
+  - Responsive booking form.
+  - Sections for About Us, Our Services, and Contact Us.
+
+- **Backend**:
+  - Node.js API for booking submissions.
+  - MySQL integration for secure data storage.
+  - Email notifications via `nodemailer`.
+
+- **Database**:
+  - Table `bookingsTable` with fields: `name`, `email`, `phoneNumber`, `address`, `date`, `time`, `service`.
+
+---
+
+## Technologies Used
+- **Frontend**: HTML, CSS, JavaScript.
+- **Backend**: Node.js, Express.js.
+- **Database**: MySQL.
+- **Email Service**: Nodemailer.
+
+---
+
+## Setup Instructions
+1. Install [Node.js](https://nodejs.org) and MySQL.
+2. Clone the repository.
+3. Install dependencies:
+   ```bash
+   npm install
+
 11/17 Naomi
 1. Initial Commit
 2. Meeting w/ Kenzo. Notes below.
@@ -34,3 +64,41 @@
 1. Initial commit of Backend code
  * Needs ability to get user input from front end
  * If you're looking to run this on your own, insert user credentials for MySQL in database.js
+
+12/3 Furqan Fazil
+* Configured backend to handle form submissions via a `/book' API endpoint.
+- Integrated database connection with MySQL2.
+- Implemented nodemailer to send confirmation emails to users.
+- Updated frontend to dynamically post form data to the backend.
+
+12/4 Talha
+* Reviewed frontend and backend integration.
+* Improved animations and transitions between sections.
+* Conducted testing of the booking API and frontend.
+
+12/4 Oumar
+* create and finalized the project documentation
+
+
+configure MySQL in index.js: 
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'your_mysql_username',
+    password: 'your_mysql_password',
+    database: 'bookings'
+});
+
+Accepts JSON payload with booking details: {
+    "name": "Furqan Fazil",
+    "email": "FurqanFaz@example.com",
+    "phoneNumber": "1234567890",
+    "address": "133 Example St",
+    "date": "2024-12-10",
+    "time": "14:00",
+    "service": "Drivway cleaning"
+}
+<<<<<<< HEAD
+12/5 Connor
+*Attempted to finalize code, unfortunately still having errors with picking up the data from the front end. 
+=======
+>>>>>>> aa193b269fc02dcf02ec6baee44536c164238efa

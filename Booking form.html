@@ -85,10 +85,39 @@
 <!-- confirmation email -->
 <script>
     function handleFormSubmit(event) {
-        event.preventDefault();
+    event.preventDefault();
+    // Get form data
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const address = document.getElementById('address').value;
+    const date = document.getElementById('date').value;
+    const time = document.getElementById('time').value;
+    const service = document.getElementById('service').value;
+    const customRequest = document.getElementById('customRequest').value;
+
+    const data = {name, email, phoneNumber: phone, address, date, time, service};
+
+    // Send the POST request to /book endpoint
+    fetch('http://localhost:3000/book', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json()) 
+    .then(data => {
         alert('Booking submitted! A confirmation email has been sent.');
+
         window.location.href = "index.html";
-    }
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again.');
+    });
+}
+
 </script>
 </body>
 </html>

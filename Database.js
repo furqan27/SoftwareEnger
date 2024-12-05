@@ -54,20 +54,5 @@ connection.query(createTableQuery, (err, results) => {
     console.log('Table created or already exists');
 });
 
-//Table manipulation code
-const exBooking = ['John J. Jon', 'johnjon@gmail.com', '1234567890', '123 Johnathon St, City', '2024-12-01', '14:30:00', 'Lawn care'];
-
-//Prepare SQL query to insert data into the bookingsTable
-const insertQuery = 'INSERT INTO bookingsTable (name, email, phoneNumber, address, date, time, service) VALUES (?, ?, ?, ?, ?, ?, ?)';
-
-//Insert values into the table (no need to use map)
-connection.query(insertQuery, exBooking, (err, results) => {
-    if (err) {
-        console.error('Error inserting data: ' + err.stack);
-        return;
-    }
-    console.log(`Inserted ${results.affectedRows} row(s)`);
-});
-
-// Closing the connection uneeded
-//connection.end();
+// Closing the connection
+connection.end();

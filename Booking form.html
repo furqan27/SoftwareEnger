@@ -106,7 +106,7 @@
         },
         body: JSON.stringify(data)
     })
-    .then(response => response.json()) 
+    .then(response => response.text()) 
     .then(data => {
         alert('Booking submitted! A confirmation email has been sent.');
 

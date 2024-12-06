@@ -2,9 +2,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql2');
 const nodemailer = require('nodemailer');
+const cors = require('cors');
 
 const app = express();
 app.use(bodyParser.json());
+app.use(cors());
 
 // Database Connection
 const connection = mysql.createConnection({
@@ -43,13 +45,13 @@ app.post('/book', (req, res) => {
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'needsclean786@gmail.com',
-                pass: 'Clean786@'
+                user: 'needscleaning2@gmail.com',
+                pass: 'xvrz clsh cekr zorx'
             }
         });
 
         const mailOptions = {
-            from: 'needsclean786@gmail.com',
+            from: 'needscleaning2@gmail.com',
             to: email,
             subject: 'Booking Confirmation',
             text: `Hi ${name},\n\nYour booking is confirmed for ${date} at ${time} for the service: ${service}.`
